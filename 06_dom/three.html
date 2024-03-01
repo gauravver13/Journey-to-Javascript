@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Manipulation</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    // div.id = "myId"
+    div.id =Math.ceil( Math.random(Math.random() * 10 + 10))
+    div.setAttribute("title", "generate a title")
+    div.style.backgroundColor = "green"
+    div.style.borderRadius = "20px"
+    div.style.padding = "12px"
+    // div.innerText = "DOM Learning"
+    const addText = document.createTextNode("Journey to Javascript by Hitesh Choudhary.")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+// Notes: 
+//     0. Create a new div function,(hint-example above)
+//     1. WAP to run a loop for the n time, for color, text, and  bgcolor and other css properties: 
+    
+</script>
+</html>

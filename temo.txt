@@ -1,0 +1,23 @@
+                            GSOC 
+45k apply proposal
+proposals 7k == 15%
+valid proposal == 3k
+selected == 900
+selection ratio == 1:3
+
+tech - html, css, js, bootstrap, react.js, node.js, express.js
+deployment!
+dsa!
+c++
+programming(research)
+
+c++ !beginners
+
+android, ios = 0;
+
+Proposals: js, python, ruby on rails, graphic design, ui-ux, 3d Modeling-inkEscape,something..
+today-:consistent company giving gSoc project.
+
+
+
+

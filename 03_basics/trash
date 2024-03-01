@@ -1,0 +1,51 @@
+void minMaxTime(char* inputTime) 
+{
+    vector<int> possibleValues = {0, 1, 2, 3, 4, 5};
+
+    int blankPosition = -1;
+
+    for (int i = 0; i < 8; ++i) 
+    {
+        if (inputTime[i] == '@') 
+        {
+            blankPosition = i;
+            break;
+        }
+    }
+    string minTime(inputTime);
+    string maxTime(inputTime);
+
+    for (int i=0; i<=5; i++) 
+    {
+        if ((blankPosition==0||blankPosition==1)&&i>2) 
+        {
+            continue;
+        }
+
+        if ((blankPosition==3||blankPosition==4)&&i>5) 
+        {
+            continue;
+        }
+
+        string currentReplacement = inputTime;
+        currentReplacement[blankPosition] = i+'0';
+
+        if (currentReplacement<minTime) 
+        {
+            minTime = currentReplacement;
+        }
+
+        if (currentReplacement>maxTime) 
+        {
+            maxTime = currentReplacement;
+        }
+    }
+
+    // Display the results
+    for(int i=0; i<=5; i++)
+    {
+        cout<<i;
+    }
+    cout<<minTime;
+    cout<<maxTime;
+}

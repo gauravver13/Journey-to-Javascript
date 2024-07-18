@@ -81,6 +81,7 @@ twodArray.forEach((element)=> {
 })
 
 twodArray.map((ele)=> {
+    // can be further mapped:
     console.log(ele);
 })
 

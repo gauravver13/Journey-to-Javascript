@@ -19,8 +19,8 @@ const regularUser = {
     }
 }
 
-// console.log(regularUser.fullname)
-// console.log(regularUser.fullname.userfullname)
+console.log(regularUser.fullname)
+console.log(regularUser.fullname.userfullname.firstname)
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
@@ -33,7 +33,7 @@ const obj4 = {5: "a", 6: "b"}
 
 // spread:
 const obj3 = {...obj1, ...obj2}
-// console.log(obj3)
+console.log(obj3)
 
 const users = [
     {
@@ -88,15 +88,15 @@ console.log(instructor)
 // navbar(company = "breeze")
 
 // JSON:
-{
-    "name": "gaurav",
-    "coursename": "JavaScript in Deep",
-    "price": "free"
-    "key":"value"
-}
+// {
+//     "name": "gaurav",
+//     "coursename": "JavaScript in Deep",
+//     "price": "free"
+//     "key":"value"
+// }
 
-[
-    {},
-    {},
-    {}
-]
+// [
+//     {},
+//     {},
+//     {}
+// ]

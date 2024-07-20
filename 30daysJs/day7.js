@@ -102,3 +102,18 @@ for (const prop in Book) {
 
 console.log(Object.keys(Book));
 console.log(Object.values(Book));
+
+
+// more!
+const course = {
+    coursename: "Deep JavaScript",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// course.courseInstructor
+// De-structure clone 
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor); 
+console.log(instructor)

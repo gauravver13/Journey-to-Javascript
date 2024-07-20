@@ -1,4 +1,5 @@
 // Objects: made through constructor and literals
+
 // Singleton
 // Object.create 
 
@@ -46,6 +47,6 @@ JsUser.greeting2 = function() {
     console.log(`Hello JS User, ${this.name}`);
 }
 
-console.log(JsUser.greeting)
+console.log(JsUser.greeting)        // Not working
 console.log(JsUser.greeting())
 console.log(JsUser.greeting2())

@@ -3,73 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Object Model</title>
+    <title>Event Listeners</title>
 </head>
 <body>
-    <div id="one">
-        Hello World
-    </div>
-    <div id="txtUpdate">Hello here to change text</div>
-    <div class="two" style="height: 100px; width: 200px; color: rgb(210, 195, 30); font-size: larger; font-weight: 600;">Change Color</div>
-    <ul>
-        <li>One</li>
-        <li>Two</li>
-    </ul>
-
-    <img src="./2022-09-18 (1).png" height="200px" width="300px">
-    <button style="margin: 10px; padding: 15px;" id="btn"  onmouseover=borderColor() onclick=changeText(element) > CLick Me</button>
+    <p class="change">Old text</p>
+    <button onclick=onChange() id="btn">Click here to change the above text</button>
+    <hr>
+    <img src="./2022-09-18 (1).png" height="200px" width="300px" id="imgId">
+    <button style="margin: 10px; padding: 15px;" id="btn" onclick=changeImg()> CLick Me</button>
 </body>
 
 <script>
-    const InScript = document.getElementById("one").innerHTML = "Inherit Script";
-    // document.getElementsByClassName("two").style.backgroundColor = "red";
-    document.querySelector('.two').style.backgroundColor = 'red';
+    const para = document.querySelector(".change")
+    const btn = document.querySelector("#btn")
 
-    let heading = document.createElement('h1')
-
-    heading.innerHTML = 'This is heading'
-
-    document.body.appendChild(heading)
-
-    const ul = document.querySelector('ul')
-    let listItem = document.createElement('li')
-    listItem.textContent = 'Three'
-
-    ul.appendChild(listItem)
-
-    // activity 3: 
-    let DelElement = document.querySelector('h1')
-    DelElement.remove()
-
-    let lastChildUl = document.querySelector('ul').lastChild
-
-    lastChildUl.remove()
-
-    // activity 4: 
-    const AttributeImg = document.querySelector('img')
-    AttributeImg.setAttribute('src', './2022-06-10 (1).png')
-
-    // const addCss = document.querySelector(".btn")
-
-
-    // activity 5:
-    const element = document.querySelector("#txtUpdate")
-    
-    function changeText(element) {
-        if(element.innerHTML !==`TEXT is CHANGED Congratulations!`)
-            element.innerHTML = `TEXT is CHANGED Congratulations!`
-        else 
-        element.innerHTML = `Text reversed`
+    function onChange() {
+        if(para.innerHTML === `Old text`)
+            para.innerHTML = `Here's the new Text..! -> Here's the functionality of changing state as many of times...! ` 
+        else
+            para.innerHTML = `Old text`
     }
 
-    let btnEle = document.querySelector('#btn')
+    // let Img = document.querySelector("#Img");
 
-    function borderColor() {
-        document.querySelector('#btn').style.borderColor = 'blue'
+    function changeImg() {
+        if(Img.src == "./2022-09-18 (1).png" )
+            document.querySelector("#imgId").src = "./2022-09-18 (1).png"
+        else
+            document.querySelector("#imgId").src = ("./2022-09-18 (1).png")
     }
 
-    
-    
+    function changeImg() {
+        addEventListener.src
+    }
 </script>
-
 </html>

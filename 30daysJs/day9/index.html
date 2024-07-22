@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <div id="one">
+        Hello World
+    </div>
+    <div id="txtUpdate">Hello here to change text</div>
+    <div class="two" style="height: 100px; width: 200px; color: rgb(210, 195, 30); font-size: larger; font-weight: 600;">Change Color</div>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+    </ul>
+
+    <img src="./2022-09-18 (1).png" height="200px" width="300px">
+    <button style="margin: 10px; padding: 15px;" id="btn"  onmouseover=borderColor() onclick=changeText(element) > CLick Me</button>
+</body>
+
+<script>
+    const InScript = document.getElementById("one").innerHTML = "Inherit Script";
+    // document.getElementsByClassName("two").style.backgroundColor = "red";
+    document.querySelector('.two').style.backgroundColor = 'red';
+
+    let heading = document.createElement('h1')
+
+    heading.innerHTML = 'This is heading'
+
+    document.body.appendChild(heading)
+
+    const ul = document.querySelector('ul')
+    let listItem = document.createElement('li')
+    listItem.textContent = 'Three'
+
+    ul.appendChild(listItem)
+
+    // activity 3: 
+    let DelElement = document.querySelector('h1')
+    DelElement.remove()
+
+    let lastChildUl = document.querySelector('ul').lastChild
+
+    lastChildUl.remove()
+
+    // activity 4: 
+    const AttributeImg = document.querySelector('img')
+    AttributeImg.setAttribute('src', './2022-06-10 (1).png')
+
+    // const addCss = document.querySelector(".btn")
+
+
+    // activity 5:
+    const element = document.querySelector("#txtUpdate")
+    
+    function changeText(element) {
+        if(element.innerHTML !==`TEXT is CHANGED Congratulations!`)
+            element.innerHTML = `TEXT is CHANGED Congratulations!`
+        else 
+        element.innerHTML = `Text reversed`
+    }
+
+    let btnEle = document.querySelector('#btn')
+
+    function borderColor() {
+        document.querySelector('#btn').style.borderColor = 'blue'
+    }
+    
+</script>
+
+</html>

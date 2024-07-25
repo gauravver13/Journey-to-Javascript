@@ -3,38 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Listeners</title>
+    <title>Event Listener</title>
+    <style>
+        #gymImg {
+            height: 300px;
+            width: 500px;
+            display: block;
+        }
+
+        #box {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <p class="change">Old text</p>
-    <button onclick=onChange() id="btn">Click here to change the above text</button>
+    <h1>Heading</h1>
+    <p id="para">This the OLD paragraph</p>
+    <button id="btn">Click ME</button>
     <hr>
-    <img src="./2022-09-18 (1).png" height="200px" width="300px" id="imgId">
-    <button style="margin: 10px; padding: 15px;" id="btn" onclick=changeImg()> CLick Me</button>
+    <img src="./2022-06-10 (1).png" alt="img" id="gymImg">
+
+    <button id="btnImg">Double click here to toggle</button>
+    <div id="box">BOX</div>
+    <hr>
+    <div>
+     Username: <input id="user" type="text">
+    </div>
+    <br>
+    <div>
+     Name: <input type="text">
+    </div>
+
+    <p id="paragraph">Text will be updated..!!</p>
+
+    <hr>
+    <hr>
+
+    <form action="#" id="myForm">
+        <ul id="uList">
+            <li>
+                <label for="Name">Name:</label>
+            </li>
+            <input type="text" name="" id="">
+            <li>
+                <label for="Username">Username:</label>
+                    <input type="text">
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                    <input type="email" name="" id="">
+            </li>
+            <li>
+                <label for="age">Age:</label>
+                    <input type="number" name="age" id="">
+            </li>
+            <li>
+                Gender:
+                <label for="Male">Male</label>
+                    <input type="radio" name="gender" id="" value="Male">
+                <label for="Female">Female</label>
+                    <input type="radio" name="gender" id="" value="Female">
+                <label for="Others">Others</label>
+                    <input type="radio" name="gender" id="" value="Others">
+            </li>
+            <li>
+                <label for="password">Password</label>
+                    <input type="password" name="password" value="password">
+            </li>
+            <li>
+                <label for="textContent">Address:
+                    <input type="text" name="" id="">
+                </label>
+            </li>
+            <li>
+                <label for="">Range</label>
+                    <input type="range" name="Range" id="">
+            </li>
+            <li>
+                <label for="options">Choose an options:</label>
+                <select name="options" id="options">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </li>
+            <button>Submit</button>
+
+        </ul>
+    </form>
+
+    <button id="addItem">ADD ITEM in form</button>
+
+    <p id="selectedOption">Selected Option: None</p>
+
+    <script>
+    // // ACTIVITY 1: 
+    // const btn = document.getElementById('btn');
+    // const paragraph = document.getElementById('para');
+
+    // btn.addEventListener('click', () => {
+    //     paragraph.textContent = "New changed TEXT is in the paragraph!!"
+        
+    // })
+
+    // const image = document.querySelector("#gymImg")
+    // const btnImg = document.querySelector("#btnImg")
+    
+    // btnImg.addEventListener('dblclick', ()=>{
+    //     if(image.style.display == 'block')
+    //         image.style.display = 'none';
+    //     else 
+    //         image.style.display = 'block';
+    // })
+
+    // // ACTIVITY 2:
+    // const box = document.querySelector("#box")
+
+    // box.addEventListener('mouseover', over)
+    // box.addEventListener('mouseout', out)
+
+    // // function randomColor() {
+    // //     return Math.random(Math.random())
+    // // }
+
+    // function over() {
+    //     box.style.backgroundColor = 'blue';
+    // }
+
+    // function out() {
+    //     box.style.backgroundColor = 'red';
+    // }
+
+    // // Activity: 3
+
+    //     const user = document.getElementById("user")
+    //     const paraphy = document.getElementById('paragraph')
+
+    //     // user.addEventListener('keydown', function event(keys) {
+    //     //     console.log(`Key pressed: ${keys.key}, KeyCode: ${keys.keyCode}`);
+    //     // })
+
+
+    //     user.addEventListener('keyup', function event(e) {
+    //         // console.log(e.value);
+    //         console.log(user.value);
+            
+    //         paraphy.textContent = user.value
+    //         console.log(`Paragraph content: ${paraphy.textContent}`);
+    //     })
+
+
+    // const user = document.getElementById('user');
+
+        // Add a keydown event listener to the input field
+    // user.addEventListener('keydown', (event) => {
+
+    //     // Log the key and keyCode to the console
+    //     //    Log the key and keyCode to the console
+    //     //   const key = event.key ? event.key : 'undefined';
+    //     //   const keyCode = event.keyCode ? event.keyCode : 'undefined';
+
+    //     console.log(`Key pressed: ${event.key}, KeyCode: ${event.keyCode}`);
+    // });
+
+
+
+    // form event 
+    // document.querySelector('form')
+
+    // const form = document.getElementById('myForm')
+    
+    // form.addEventListener('submit', (e)=>{
+    //     e.preventDefault()
+    //     // console.log(e);
+    //     console.log(e.timeStamp);  
+    //     console.log('Event target',e.target);
+
+    //     const formData = new FormData(e.target)
+    //     // console.log(formData);
+
+    //     // const formObject = Object.fromEntries(formData.entries())
+    //     // console.log(formObject);
+
+    //     const Data = {}
+
+    //     formData.forEach((value, key) => {
+    //         Data[key] = value;
+    //         console.log(`Data Key:${Data[key]}:${value}  `);
+    //     });
+    //     console.log(`Data: `,Data);
+    // })
+
+
+    // document.getElementById('options').addEventListener('change', (e)=> {
+    //     const selectedValue = e.target.value;
+    //     console.log(selectedValue);
+
+    //     document.getElementById('selectedOption').innerText = `Selected Option: `+selectedValue
+    // })
+    // console.log(`NEXT..`);
+
+    const ul = document.getElementById('uList')
+    
+    ul.addEventListener('click', (e)=>{
+        console.log(e.target.value);
+    })
+
+    
+    const addChild = document.getElementById('addItem')
+    
+    addChild.addEventListener('click', ()=> {
+        const add = document.createElement('LI')
+        add.textContent = `Here's the new LI`
+        ul.appendChild(add)
+    })
+
+    </script>
 </body>
 
-<script>
-    const para = document.querySelector(".change")
-    const btn = document.querySelector("#btn")
-
-    function onChange() {
-        if(para.innerHTML === `Old text`)
-            para.innerHTML = `Here's the new Text..! -> Here's the functionality of changing state as many of times...! ` 
-        else
-            para.innerHTML = `Old text`
-    }
-
-    // let Img = document.querySelector("#Img");
-
-    function changeImg() {
-        if(Img.src == "./2022-09-18 (1).png" )
-            document.querySelector("#imgId").src = "./2022-09-18 (1).png"
-        else
-            document.querySelector("#imgId").src = ("./2022-09-18 (1).png")
-    }
-
-    function changeImg() {
-        addEventListener.src
-    }
-</script>
 </html>
